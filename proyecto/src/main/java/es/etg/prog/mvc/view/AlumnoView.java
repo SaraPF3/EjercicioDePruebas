@@ -7,16 +7,18 @@ import es.etg.prog.mvc.model.database.AlumnosDAOImp;
 
 public class AlumnoView {
 
-    public static final String PEDIR_NOMBRE_ALUMNO = "Introduzca el nombre del alumno: ";
-    public static final String PEDIR_APELLIDOS_ALUMNO = "Introduzca los apellidos del alumno: ";
-    public static final String PEDIR_EDAD_ALUMNO = "Introduzca la edad del alumno: ";
+    public static final String TXT_PEDIR_NOMBRE_ALUMNO = "Introduzca el nombre del alumno: ";
+    public static final String TXT_PEDIR_APELLIDOS_ALUMNO = "Introduzca los apellidos del alumno: ";
+    public static final String TXT_PEDIR_EDAD_ALUMNO = "Introduzca la edad del alumno: ";
     public static final String TXT_INSERTAR_ALUMNO = ". Insertar alumno";
     public static final String TXT_LISTAR_ALUMNOS = ". Listar alumnos";
     public static final String TXT_SALIR = ". Salir";
-
+    public static final String TXT_OPCION_INVALIDA = "Opción inválida";
+    public static final String TXT_LISTADO_ALUMNOS = "Listado de alumnos:";
+    public static final String TXT_ALUMNO_INSERTADO = "Alumno insertado";
+    public static final String TXT_SALIENDO_MENU = "Saliendo del menú";
 
     public static final int INSERTAR_ALUMNO = 1;
-    
     public static final int LISTAR_ALUMNOS = 2;
     public static final int SALIR = 3;
 
@@ -40,30 +42,28 @@ public class AlumnoView {
 
                 case INSERTAR_ALUMNO:
 
-                    System.out.println(PEDIR_NOMBRE_ALUMNO);
+                    System.out.println(TXT_PEDIR_NOMBRE_ALUMNO);
                     nombre = sc.nextLine();
 
-                    System.out.println(PEDIR_APELLIDOS_ALUMNO);
+                    System.out.println(TXT_PEDIR_APELLIDOS_ALUMNO);
                     apellidos = sc.nextLine();
 
-                    System.out.println(PEDIR_EDAD_ALUMNO);
+                    System.out.println(TXT_PEDIR_EDAD_ALUMNO);
                     edad = Integer.parseInt(sc.nextLine());
 
                     alumnosDAOImp.insertar(new Alumno(nombre, apellidos, edad));
-                    System.out.println("Alumno insertado.");
+                    System.out.println(TXT_ALUMNO_INSERTADO);
                 break;
 
                 case LISTAR_ALUMNOS:
-                    System.out.println("""
-                                       Listado de alumnos:
-                                       """ + alumnosDAOImp.listar());
+                    System.out.println(TXT_LISTADO_ALUMNOS + "\n" + alumnosDAOImp.listar());
                 break;
 
                 case SALIR:
-                    System.out.println("Saliendo...");
+                    System.out.println(TXT_SALIENDO_MENU);
                     return;
 
-                default: System.out.println("Opción inválida.");
+                default: System.out.println(TXT_OPCION_INVALIDA);
             }
         }
 
