@@ -27,8 +27,7 @@ public class AlumnoTest {
 
 
     @Test
-    public void testValoresAlumno()
-    {
+    public void testValoresAlumno(){
 
         Alumno alumno = new Alumno("Pedro", "Pérez", 52);
         assertEquals("Pedro", alumno.getNombre());

@@ -7,7 +7,7 @@ public class App {
 
     AlumnoView view = new AlumnoView();
 
-    view.menuGestionarAlumno();
+    view.menuGestionarAlumnos();
 
     }
 }

@@ -1,4 +1,4 @@
-Esto es un ejercicio de creación de alumnos en el que se pueden añadir los alomnos que se quiera y posteriormente ver una lista de ellos.
+Esto es un ejercicio de creación de alumnos en el que se pueden añadir los alumnos que se quiera y posteriormente ver una lista de ellos.
 
 Se utiliza Mockito para realizar pruebas en la base de datos.
 

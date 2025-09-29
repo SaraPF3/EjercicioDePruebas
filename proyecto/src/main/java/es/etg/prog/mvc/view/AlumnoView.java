@@ -3,7 +3,7 @@ package es.etg.prog.mvc.view;
 import java.util.Scanner;
 
 import es.etg.prog.mvc.model.database.Alumno;
-import es.etg.prog.mvc.model.database.AlumnosDAOImp;
+import es.etg.prog.mvc.model.database.AlumnosDAOImpl;
 
 public class AlumnoView {
 
@@ -26,11 +26,11 @@ public class AlumnoView {
     private String nombre;
     private String apellidos;
     private int edad;
-    AlumnosDAOImp alumnosDAOImp = new AlumnosDAOImp();
+    AlumnosDAOImpl alumnosDAOImp = new AlumnosDAOImpl();
 
 
 
-    public void menuGestionarAlumno(){
+    public void menuGestionarAlumnos(){
         while (true) {
 
             System.out.println(INSERTAR_ALUMNO + TXT_INSERTAR_ALUMNO);

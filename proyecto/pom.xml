@@ -21,7 +21,6 @@
         </dependency>
 
 
-        <!-- Dependencia de Mockito-->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
@@ -29,7 +28,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Dependencia de Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
