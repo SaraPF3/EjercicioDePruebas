@@ -42,11 +42,6 @@ public class AlumnoTest {
         Alumno alumno = new Alumno("Pedro", "Pérez", 52);
         alumnosDAO.insertar(alumno);
         verify(alumnosDAO).insertar(alumno);
-
-        when(alumnosDAO.listar()).thenReturn(Arrays.asList(alumno));
-
-        List<Alumno> lista = alumnosDAO.listar();
-        assertTrue(lista.contains(alumno));
     }
 
      @Test
